@@ -9,6 +9,7 @@ import { connectDB } from './config/database';
 import auditMiddleware from './middlewares/auditoria.middleware';
 import errorHandlerMiddleware from './middlewares/errorHandler.middleware';
 
+import obraSocialRoutes from './modules/obraSocial/obraSocial.routes'
 
 
 const app: Application = express();
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(auditMiddleware);
 app.use(cors());
 
+app.use('/api/v1/obraSocial', obraSocialRoutes);
 
 app.use(errorHandlerMiddleware);
 
