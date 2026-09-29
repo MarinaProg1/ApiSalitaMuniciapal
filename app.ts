@@ -9,7 +9,8 @@ import { connectDB } from './config/database';
 import auditMiddleware from './middlewares/auditoria.middleware';
 import errorHandlerMiddleware from './middlewares/errorHandler.middleware';
 
-import obraSocialRoutes from './modules/obraSocial/obraSocial.routes'
+import obraSocialRoutes from './modules/obraSocial/obraSocial.routes';
+import pacienteRoutes from './modules/pacientes/paciente.routes';
 
 
 const app: Application = express();
@@ -21,6 +22,7 @@ app.use(auditMiddleware);
 app.use(cors());
 
 app.use('/api/v1/obraSocial', obraSocialRoutes);
+app.use('/api/v1/pacientes', pacienteRoutes);
 
 app.use(errorHandlerMiddleware);
 
