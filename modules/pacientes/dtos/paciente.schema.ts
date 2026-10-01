@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import {DireccionZodSchema} from '../../../utils/direccion.interfaces';
 import { TelefonoZodSchema } from '../../../utils/telefono.interfaces';
-import {CrearObraSocialSchema } from '../../obraSocial/dtos/obraSocial.schema';
+
 
 export const CrearPacienteSchema = z.object({
     body: z.object({

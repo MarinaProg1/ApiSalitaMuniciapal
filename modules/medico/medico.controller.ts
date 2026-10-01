@@ -20,6 +20,7 @@ const getMedico  = async (req: Request<unknown, unknown, unknown, IMedicoDTO >, 
 const createMedico = async (req: Request<unknown, unknown, IMedicoDTO>, res: Response) => {
     try {
         const nuevoMedico = await Medico.create(req.body);
+      
 
         return respuestaEstandar(res, 201, true, 'Medico creado exitosamente', nuevoMedico);
     } catch (error: any) {

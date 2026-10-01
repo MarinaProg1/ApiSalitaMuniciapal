@@ -29,17 +29,22 @@ const medicoSchema = new Schema<IMedico>({
 
         },
        especialidades: [{
-        type: String
+        type: Schema.Types.ObjectId,
+        ref: 'especialidad'
       }],
         numeroMatricula:{
             type:Number,
             required: [true, 'El numero de matricula es obligatorio'],
         },
-        direccion:DireccionSchema,
-        teléfono:TelefonoSchema,
+          direccion: {
+        type: DireccionSchema
+    },
+    telefono:{
+        type: TelefonoSchema
+    },
         obraSocial:{
             type: Schema.Types.ObjectId,
-            ref: 'obraSocial',
+            ref: 'obraSocial'
         },
         activo: {
             type: Boolean,
@@ -58,6 +63,6 @@ medicoSchema.set('toJSON', {
         delete medicoRetorno.__v;
     }
 });
-const MedicoModel = model<IMedico>('ObraSocial', medicoSchema);
+const MedicoModel = model<IMedico>('Medico', medicoSchema);
 
 export default MedicoModel;
