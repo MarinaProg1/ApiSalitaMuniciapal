@@ -13,6 +13,7 @@ import obraSocialRoutes from './modules/obraSocial/obraSocial.routes';
 import pacienteRoutes from './modules/pacientes/paciente.routes';
 import medicoRoutes from './modules/medico/medico.routes';
 import especilidadRoutes from './modules/especialidad/especialidad.routes';
+import historiaClinicaRoutes from './modules/historiaClinica/historiaClinica.routes';
 
 
 const app: Application = express();
@@ -27,6 +28,7 @@ app.use('/api/v1/obraSocial', obraSocialRoutes);
 app.use('/api/v1/pacientes', pacienteRoutes);
 app.use('/api/v1/medicos', medicoRoutes);
 app.use('/api/v1/especialidades', especilidadRoutes);
+app.use('/api/v1/historiaClinica', historiaClinicaRoutes);
 
 app.use(errorHandlerMiddleware);
 
