@@ -14,6 +14,7 @@ import pacienteRoutes from './modules/pacientes/paciente.routes';
 import medicoRoutes from './modules/medico/medico.routes';
 import especilidadRoutes from './modules/especialidad/especialidad.routes';
 import historiaClinicaRoutes from './modules/historiaClinica/historiaClinica.routes';
+import consultaMedicaRoutes from './modules/consultaMedica/consultaMedica.routes';
 
 
 const app: Application = express();
@@ -29,6 +30,7 @@ app.use('/api/v1/pacientes', pacienteRoutes);
 app.use('/api/v1/medicos', medicoRoutes);
 app.use('/api/v1/especialidades', especilidadRoutes);
 app.use('/api/v1/historiaClinica', historiaClinicaRoutes);
+app.use('/api/v1/consultaMedica', consultaMedicaRoutes);
 
 app.use(errorHandlerMiddleware);
 
