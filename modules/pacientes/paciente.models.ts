@@ -37,9 +37,9 @@ const pacienteSchema = new Schema<IPaciente>({
     telefono:{
         type: TelefonoSchema
     },
-    obraSocail:{
+    obraSocial:{
         type: Schema.Types.ObjectId,
-        ref: 'obraSocial',
+        ref: 'ObraSocial',
     },
      activo: {
         type: Boolean,

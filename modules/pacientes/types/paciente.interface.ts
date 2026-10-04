@@ -13,7 +13,7 @@ export interface IPaciente extends Document{
     email: string
     direccion: IDireccion,
     telefono:ITelefono,
-    obraSocail:IObraSocial,
+    obraSocial:IObraSocial,
     activo: boolean  
 }
 
